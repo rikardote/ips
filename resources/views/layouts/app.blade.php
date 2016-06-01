@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Inventario de IP'S</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}">
@@ -21,9 +21,17 @@
 </head>
 <body>
     @yield('nav')
-       
-    @yield('content')
-
+    <div id="wrap">
+        @yield('content')
+    </div>   
+    
+    <div id="footer">
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted"> &copy;  {{date('Y')}} ISSSTE BAJA CALIFORNIA Por: Ricardo Fuentes</p>
+      </div>
+    </footer>
+    </div>
 
     <!-- JavaScripts -->
     <script src="{{ asset('plugins/jquery/js/jquery.js') }}"></script>
@@ -36,4 +44,5 @@
         $('#alert').delay(2000).fadeOut(800)
     </script>
 </body>
+
 </html>
