@@ -1,0 +1,54 @@
+.modal-content {
+  background-color: #0480be;
+  color: navy;
+}
+.modal-body {
+  background-color: #fff;
+
+}
+.panelColor{
+  color: white;
+}
+.panelColorGreen{
+  color: #337AB7;
+}
+.panelColorRed{
+  color: #B1103C;
+}
+body.modal-open .supreme-container{
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+}
+#card-div{
+  text-align: center;
+  
+  margin: 16px;
+  height: 50px;
+  
+
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: #D9EDF7;
+}
+.tachado{
+  text-decoration:line-through;
+  color: #FF5151;
+}
+.chosen-choices{
+     min-width: 200px;
+ }
+ 
+footer { 
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 20px;
+  background-color: #E9EAED;
+  text-align: center;
+ }

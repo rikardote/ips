@@ -1,0 +1,53 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Application Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register all of the routes for an application.
+| It's a breeze. Simply tell Laravel the URIs it should respond to
+| and give it the controller to call when that URI is requested.
+|
+*/
+
+Route::group(['middleware' => 'web'], function () {
+	   
+		Route::get('/', [
+	        'uses' => 'IpsController@index',
+	        'as' => 'inventario.ip.index'
+    	]);
+		Route::get('{ubicacion_id}/show', [
+	        'uses' => 'IpsController@show',
+	        'as' => 'inventario.ip.show'
+    	]);
+		Route::get('/{ip}', [
+	        'uses' => 'IpsController@create',
+	        'as' => 'inventario.ip.create'
+    	]);
+    	Route::get('/{ip}/edit', [
+	        'uses' => 'IpsController@edit',
+	        'as' => 'inventario.ip.edit'
+    	]);
+    	Route::patch('/{id}/update', [
+	        'uses' => 'IpsController@update',
+	        'as' => 'inventario.ip.update'
+   		 ]);
+    	Route::post('/{id}', [
+	        'uses' => 'IpsController@store',
+	        'as' => 'inventario.ip.store'
+   		 ]);
+    	Route::get('/{id}/destroy', [
+	        'uses' => 'IpsController@destroy',
+	        'as' => 'inventario.ip.destroy'
+   		 ]);
+    	/*Route::get('/{ip}/edit', [
+	        'uses' => 'IpsController@edit',
+	        'as' => 'admin.ip.edit'
+    	]);
+    	Route::post('/', [
+	        'uses' => 'IpsController@store',
+	        'as' => 'admin.ip.store'
+    	]);
+    	*/
+	});
