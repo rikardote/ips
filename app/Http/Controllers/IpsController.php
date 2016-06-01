@@ -87,5 +87,6 @@ class IpsController extends Controller
         $dato->delete();
       	//Toastr::error('Ip Liberada Correctamente');
         return redirect('/');
+
     } 
 }
