@@ -34,6 +34,7 @@ function ipUser($ip)
         case 9:
         	$datos->color='#000000';
         	break;
+        default: $datos->color='yellow';;
 	}
 	return $datos;
 	

@@ -1,8 +1,5 @@
 @extends('layouts.app')
-@section('styles')
-	 
-	 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-@endsection
+
 @section('content')
 	<nav class="floating-menu supreme-container">
 	<a style="color: black; background-color: white;" href="{{route('inventario.ip.index')}}">TODAS</a>
@@ -19,6 +16,7 @@
 	</nav>
 
   	<div class="container supreme-container">
+  	<div class="panel-group">
 	    <article>
 			@for($i=2; $i < 255; $i++)
 				{{--*/ $ip = '192.161.59.'.$i /*--}}
@@ -26,10 +24,10 @@
 				{{--*/ $datos = ipUser($ip) /*--}}
 					<a data-url="{{ route('inventario.ip.edit', $ip) }}" class="load-form-modal  anchor" data-toggle ="modal" data-target='#form-modal'>
 					
-					<div class="panel panel-default shadow">
+					<div align="center" class="no_break panel panel-default shadow">
 						{{$ip}}
 			
-						<div class="fuente" style="background-color: {{$datos->color}};">{{$datos->user}}</div>
+						<div class="no_break fuente" style="background-color: {{$datos->color}};">{{$datos->user}} | {{$datos->machine_name}}</div>
 					</div>
 
 					</a>
@@ -38,7 +36,7 @@
 			@endfor
 	    </article>
 	</div>
-
+</div>
 
 
 	@include('partials.form-modal', ['title'=>'Asignar Ip'])

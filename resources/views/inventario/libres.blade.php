@@ -1,8 +1,5 @@
 @extends('layouts.app')
-@section('styles')
 
-	 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-@endsection
 @section('content')
 	<nav class="floating-menu supreme-container">
 	<a style="color: black; background-color: white;" href="{{route('inventario.ip.index')}}">TODAS</a>

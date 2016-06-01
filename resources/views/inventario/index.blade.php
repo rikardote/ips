@@ -1,8 +1,5 @@
 @extends('layouts.app')
-@section('styles')
-	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-@endsection
+
 @section('content')
 <nav class="floating-menu supreme-container">
 	<a style="color: black; background-color: white;" href="{{route('inventario.ip.index')}}">TODAS</a>
@@ -18,6 +15,7 @@
 	<a style="color: black; background-color: yellow;" href="{{ route('inventario.ip.show', 0) }}">LIBRE</a>
 </nav>
   	<div class="container supreme-container">
+  	<div class="panel-group">
   	 <article>
 	   
 			@for($i=2; $i < 255; $i++)
@@ -28,10 +26,10 @@
 				
 					<a data-url="{{ route('inventario.ip.edit', $ip) }}" class="load-form-modal  anchor" data-toggle ="modal" data-target='#form-modal'>
 					
-					<div class="panel panel-default shadow">
+					<div align="center" class="no_break panel panel-default  div-border shadow">
 						{{$ip}}
-			
-						<div class="fuente" style="background-color: {{$datos->color}};">{{$datos->user}}</div>
+						<div class="no_break fuente" style="background-color: {{$datos->color}};">{{$datos->user}} | {{$datos->machine_name}}</div>
+
 					</div>
 						
 					</a>
@@ -39,7 +37,7 @@
 				@else
 					<a data-url="{{ route('inventario.ip.create', $ip) }}" class="load-form-modal  anchor" data-toggle ="modal" data-target='#form-modal'>
 					
-					<div align="center" class="panel panel-default shadow">
+					<div align="center" class="no_break  panel panel-default div-border shadow">
 						<strong>{{$ip}}</strong>
 						<div class="fuentelibre">&nbsp;</div>
 					</div>
@@ -50,6 +48,7 @@
 				
 		@endfor
 	   </article>	
+	   </div>
 	</div>
 	
 

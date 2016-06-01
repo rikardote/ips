@@ -9,9 +9,10 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/journal/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     
-    @yield('styles')
-     <link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}">
     <!-- Styles -->
     
     <link rel="stylesheet" href="{{ asset('css/stylelayout.css') }}">

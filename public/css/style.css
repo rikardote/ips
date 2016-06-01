@@ -9,6 +9,17 @@ article {
     -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
     column-count: 3;
+
+    
+}
+.no_break{
+	-webkit-column-break-inside: avoid;
+  /* Chrome, Safari, Opera */
+  page-break-inside: avoid;
+  /* Firefox */
+  break-inside: avoid;
+  /* IE 10+ */
+
 }
 @font-face {
     font-family: 'Roboto Condensed', sans-serif;
@@ -17,10 +28,14 @@ article {
 
 p.created_at { margin: 0; padding: 0; }
 article h2 { margin: 0 0 10px 0; padding: 0; }
-.fuente {font-size:x-small;  color: white; }
+.fuente {
+	font-size: small;  
+	color: white; 
+	text-align: center;
+}
 .fuentelibre {
 	font-size:xx-small; 
-	background-color: yellow; 
+	background-color: #FFFCBF; 
 }
 
 div.shadow {
@@ -49,4 +64,7 @@ font-size: 0.9em;
 display: block;
 margin: 0 0.5em;
 color: white;
+}
+.div-border{
+	 border-style: solid!important;
 }
